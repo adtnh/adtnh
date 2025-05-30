@@ -1,4 +1,4 @@
---end
+end
 name = 'Admin'
 pass = '9992'
 function start()
