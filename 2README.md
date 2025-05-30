@@ -9,7 +9,7 @@ function START()
     "my function 4",
     "my function 5",
     "Exit"
-  }, 0, "script by: your name")
+  }, 0, "script by: your name yes")
 
   if menu == 1 then a() end
   if menu == 2 then b() end
