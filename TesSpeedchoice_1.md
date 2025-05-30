@@ -1,6 +1,6 @@
 --end
 name = 'Admin'
-pass = '9992'
+pass = '999'
 function start()
 print ("NEXT")
 end 
