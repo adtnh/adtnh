@@ -1,11 +1,10 @@
---end
-name = 'Admin'
+name = 'admin'
 pass = '9992'
 function start()
 print ("NEXT")
 end 
 
-input = gg.prompt({'INPUT NAME','INPUT PASSWORD'}, {"Admin","9992"}, nil,{'','text'})
+input = gg.prompt({'INPUT NAME','INPUT PASSWORD'}, nil,{'Text','text'})
 if not input then os.exit() end
 if input[1] == name then start() else
 print ("NAMA SALAH")
