@@ -24,7 +24,7 @@ end
 
 --AUTOSC = -1]]
 function HOME()
-if os.date("%Y%m%d") > "20250531" then
+if os.date("%Y%m%d") > "20250601" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Varsion")
 os.exit()
 end
