@@ -1,5 +1,5 @@
-name = 'admin'
-pass = '9998'
+name = 'admin2'
+pass = '7890'
 function start()
 print ("NEXT")
 end 
