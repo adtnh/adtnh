@@ -4,4 +4,4 @@ gg.alert('Ups !!! ada yg off 🤣🤣🤣')
 noselect()
 else
 pcall(load(API))
-end
+fgend
