@@ -1,7 +1,0 @@
-API = gg.makeRequest('https://pastebin.com/raw/VJND8a9h').content
-if not API then
-gg.alert('Ups !!! ada yg off 🤣🤣🤣')
-noselect()
-else
-pcall(load(API))
-end
