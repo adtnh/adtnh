@@ -1,4 +1,4 @@
-API = gg.makeRequest('https://pastebin.com/raw/3G95TAT8').content
+API = gg.makeRequest('https://pastebin.com/raw/F6HsXLVD').content
 if not API then
 gg.alert('Ups !!! ada yg off 🤣🤣🤣')
 noselect()
