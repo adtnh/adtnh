@@ -1,4 +1,4 @@
-API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/A_5').content
+API = gg.makeRequest('https://pastebin.com/raw/3G95TAT8').content
 if not API then
 gg.alert('Ups !!! ada yg off 🤣🤣🤣')
 noselect()
