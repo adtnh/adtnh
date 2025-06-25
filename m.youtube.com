@@ -1,16 +1,38 @@
-## Hi there 👋
+--[[if gg.isVisible(true) 
+  then 
+    gg.setVisible(false)
+  end
 
-<!--
-**adtnh/adtnh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+function main()
+Menu = gg.choice({"Go Rally Fury"},nil,"Online & Offline Script")
 
-Here are some ideas to get you started:
+if Menu == 1 then Online() end
+if Menu == 2 then Offline() end
+end
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+function Online()
+V = load(gg.makeRequest("https://paste.tc/raw/o7m5HXUXi4").content)
+pcall(V)
+end
+function Offline()
+gg.alert('You Are Testing Offline Function')
+end
+
+main()
+
+while(true)
+do
+  while gg.isVisible(true)
+    do
+      gg.setVisible(false)
+      main()
+    end
+end ]]
+
+API = gg.makeRequest('https://pastebin.com/raw/ayVapa6z').content
+if not API then
+gg.alert('Ups !!! ada yg off 🤣🤣🤣')
+noselect()
+else
+pcall(load(API))
+end
