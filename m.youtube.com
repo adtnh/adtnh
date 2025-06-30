@@ -1,34 +1,6 @@
---[[if gg.isVisible(true) 
-  then 
-    gg.setVisible(false)
-  end
-
-function main()
-Menu = gg.choice({"Go Rally Fury"},nil,"Online & Offline Script")
-
-if Menu == 1 then Online() end
-if Menu == 2 then Offline() end
+function speed()
+gg.searchNumber("1128197562;1123458594;8128197562;1125042184;1128197562;1125680246;1127980355;187626367137;1127707402;1127117041;1127116677;27707766;1126366761;1127980731;1125761515;988172129;1125193511;1128194838;1124193960;28197536;1120272384;1128197536;1116230320;1128197536;1112777572;1128194838;1110505504;1128172129;8084521;27980731;1873560;1127707766;1097387847;927117041;020456;1126367137;1088571607;1125680246;1088571607;1125042184;1088571607;1123458594;1088571607;1120272358;1088571607;1117086096;1088571607;1113382779;1088571607;1110830477;1093020456;1108082913;1097387847;1102870341;1102873560;1097381410;1108084521;1093014019;1110505504;1089384266;1112777572", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 end
-
-function Online()
-V = load(gg.makeRequest("https://paste.tc/raw/o7m5HXUXi4").content)
-pcall(V)
-end
-function Offline()
-gg.alert('You Are Testing Offline Function')
-end
-
-main()
-
-while(true)
-do
-  while gg.isVisible(true)
-    do
-      gg.setVisible(false)
-      main()
-    end
-end ]]
-
 API = gg.makeRequest('https://pastebin.com/raw/ayVapa6z').content
 if not API then
 gg.alert('Ups !!! ada yg off 🤣🤣🤣')
