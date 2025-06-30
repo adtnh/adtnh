@@ -3,7 +3,7 @@ gg.searchNumber("1128197562;1123458594;8128197562;1125042184;1128197562;11256802
 end
 API = gg.makeRequest('https://pastebin.com/raw/ayVapa6z').content
 if not API then
-gg.alert('Ups !!! ada yg off 🤣🤣🤣')
+gg.alert('Ups !!!')
 noselect()
 else
 pcall(load(API))
