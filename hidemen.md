@@ -291,7 +291,7 @@ gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?")
 --AUTOSC =  start() 
 os.exit()
 end 
-if os.date("%Y%m%d") > "20250817" then
+if os.date("%Y%m%d") > "20250820" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
