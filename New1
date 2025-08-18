@@ -1,7 +1,0 @@
-API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/siyek').content
-if not API then
-gg.alert('Ups !!! ada yg off 🤣🤣🤣')
-noselect()
-else
-pcall(load(API))
-end
