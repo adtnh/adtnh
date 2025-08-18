@@ -159,7 +159,7 @@ revert = gg.getListItems()
 local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == gg.TYPE_FLOAT then
-		v.value = "100000.0"
+		v.value = "999990.0"
 		v.freeze = true
 end gg.addListItems(t) 
 gg.toast("Hide")
