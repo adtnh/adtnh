@@ -276,7 +276,7 @@ io.output(folderData):close()
 os.remove("/storage/0403-0201/###/66.lua",gg.LOAD_APPEND)
 io.output(folderData):close()
 
-pass = 'Halal?'
+pass = 'bebas123'
 function start()
 --gg.alert("THE SCRIPT IS OPEN") 
 print ("NEXT")
