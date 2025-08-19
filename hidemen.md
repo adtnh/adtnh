@@ -1,18 +1,42 @@
+gg.alert("⚠️⚠️⚠️ WARNING\n🔸Jangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan Game Crash Parmanen (Harus Hapus Data Game agar bisa Normal kembali)")
 
+if true then
+gg.setVisible(false)
+local org = gg.searchNumber
+local hook = function(...)
+gg.setVisible(false)
+local ret = org(...)
+if gg.isVisible() then
+gg.setVisible(false)
+while true do gg.clearResults() 
+gg.clearResults() 
+--[[gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(99999)
+gg.editAll("--9999999", gg.TYPE_DWORD)
+gg.processResume()
+]]
+gg.sleep(1000) gg.processKill() 
+end 
+hook() end return ret end gg.searchNumber = hook
+end
 function START()
   menu = gg.choice({
     "⭕  Booster Pro+",
+    "⭕  Booster Pro+ for 32bit",
     "⭕  Speed_Hack >",
-    "⭕  Hide Trees >",
+    "⭕  Hide Trees + Booster Color >",
     "⭕  Refresh for Booster ",
-    "❎  Exit Script"
+    "❎  Exit Script",
+    "⭕  INFO ",
   }, nil, "SCRIPT RALLY FURY MOD By BTR")
   if menu == 1 then a() end
-  if menu == 2 then b() end
-  if menu == 3 then c() end
-  if menu == 4 then d() end
-  if menu == 5 then exit() end
-
+  if menu == 2 then bit32() end
+  if menu == 3 then b() end
+  if menu == 4 then c() end
+  if menu == 5 then d() end
+  if menu == 6 then exit() end
+  if menu == 7 then info() end
   XGCK = -1 end
   
 function a()
@@ -65,6 +89,57 @@ if gg.isVisible(false) then break end
 mash() 
 gg.sleep(1000)
  end end
+ 
+ function bit32()
+gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER) 
+gg.clearResults() gg.clearList()
+gg.searchNumber("16656", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(9999) gg.addListItems(t)
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + -0x92C
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+copy = nil
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("257", gg.TYPE_WORD)
+local t = gg.getResults(9999) gg.addListItems(t)
+gg.processResume()
+
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+    v.flags = 32
+	v.address = v.address + -0xA
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+copy = nil
+revert = gg.getListItems()
+local results = gg.getListItems()
+for i, v in ipairs(results) do
+	if v.flags == gg.TYPE_QWORD then
+		v.value = "744107165497924502"
+		v.freeze = false
+	end
+end
+gg.addListItems(results)
+gg.clearResults() 
+gg.addListItems(results)
+gg.setValues(results) 
+gg.toast("NOS UNLIMITED AKTIF FOR 32BIT 🔥")
+function mash()
+gg.setValues(results)  end
+while true do
+gg.addListItems(results)
+if gg.isVisible(false) then break end
+mash() 
+gg.sleep(1000)
+ end end
 
 function b()
 XX = gg.choice({
@@ -72,7 +147,7 @@ XX = gg.choice({
     "⚡ Speed 10%",
     "⚡ Speed 15%",
     "⚡ Speed Max I",
-    "⚡ Speed Max II",   
+    "⚡ Speed Hack OFF",   
   }, nil, "BTR Menu Hack Speed")
   if XX == 1 then sp1() end
   if XX == 2 then sp2() end
@@ -81,124 +156,311 @@ XX = gg.choice({
   if XX == 5 then sp5() end end
   
 function sp1()
-  gg.clearResults() gg.clearList()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
+gg.clearResults() gg.clearList() sentral()
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 64
+	v.address = v.address + -0xC
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 64 then
-		v.value = 1.00019
+		v.value = 1.00011
 		v.freeze = true
 end gg.addListItems(t)  
 gg.toast("Speed 1 Active ")
-gg.clearResults() gg.clearList() end end
+--gg.clearResults() gg.clearList() 
+end end
 
 function sp2()
-  gg.clearResults() gg.clearList()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
+gg.clearResults() gg.clearList() sentral()
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 64
+	v.address = v.address + -0xC
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 64 then
-		v.value = 1.00025
+		v.value = 1.00016
 		v.freeze = true
 end gg.addListItems(t)  
 gg.toast("Speed 2 Active")
 gg.clearResults() gg.clearList() end end
 
 function sp3()
-  gg.clearResults() gg.clearList()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
+gg.clearResults() gg.clearList() sentral()
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 64
+	v.address = v.address + -0xC
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 64 then
-		v.value = 1.00035
+		v.value = 1.00025
 		v.freeze = true
 end gg.addListItems(t)  
 gg.toast("Speed 3 Active")
 gg.clearResults() gg.clearList() end end
 
 function sp4()
-  gg.clearResults() gg.clearList()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
+gg.clearResults() gg.clearList() sentral()
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 64
+	v.address = v.address + -0xC
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 64 then
-		v.value = 1.00070
+		v.value = 1.00095
 		v.freeze = true
 end gg.addListItems(t)  
 gg.toast("Speed Max I Active")
 gg.clearResults() gg.clearList() end end
 
 function sp5()
-  gg.clearResults() gg.clearList()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
-revert = gg.getListItems() local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == 64 then
-		v.value = 1.00099
-		v.freeze = true
-end gg.addListItems(t)  
-gg.toast("Speed Max II Active")
-gg.clearResults() gg.clearList() end end
-
-function c()
- XX3 = gg.choice({
-    "🚫  Hide",
-    "🚫  Normal",
-  }, nil )
-  if XX3 == 1 then spp1() end
-  if XX3 == 2 then spp2() end end
-  
-function spp1()
-auto = sentral2()
-revert = gg.getListItems()
+gg.clearResults() gg.clearList() sentral()
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+local copy = false
 local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_FLOAT then
-		v.value = "999990.0"
-		v.freeze = true
-end gg.addListItems(t) 
-gg.toast("Hide")
-gg.clearResults() gg.clearList() end end
+v.flags = 64
+	v.address = v.address + -0xC
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
 
-function spp2()
-auto = sentral2()
-revert = gg.getListItems()
-local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_FLOAT then
-		v.value = "-100000.0"
-		v.freeze = true end gg.addListItems(t)
-		gg.toast("normal")
-gg.clearResults() gg.clearList() end end
-
-function exit()
-auto = sentral()
-local t = gg.getResults(999) gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 64 then
 		v.value = 1
 		v.freeze = true
-	end gg.addListItems(t)  
-gg.clearResults() gg.clearList() end
-os.remove("/storage/emulated/0/Download/cache.mtsx",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
-io.output(fileData):close()
-gg.clearResults() gg.clearList()
-os.remove("/storage/emulated/0/Download/Telegram/🇲🇨NEW_UPDATE byBTR.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-gg.processResume()
-os.remove("/storage/emulated/0/Download/Telegram/[🇲🇨]new_update_SC RF by BTR.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-gg.clearResults() gg.clearList()
-os.exit()
+end gg.addListItems(t)  
+gg.toast("Speed OFF")
+gg.clearResults() gg.clearList() end end
+
+function c()
+ XX3 = gg.choice({
+    "🪵  Hide Pohon",
+    "🌲  Tampilkan Pohon",
+    "🟢  Color Ijo On 😅😅",
+    "🟡  Color Ijo Off 🤣🤣",
+  }, nil )
+  if XX3 == 1 then spp1() end
+  if XX3 == 2 then spp2() end
+  if XX3 == 3 then spp3() end
+  if XX3 == 4 then spp4() end end
+  
+function spp1()
+gg.clearResults() gg.clearList() sentral()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + -0x12
+	if copy then v.name = v.name..' #2' end
 end
+gg.addListItems(t)
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults()
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = gg.TYPE_FLOAT
+	v.address = v.address + -0x120
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+revert = gg.getListItems() local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_FLOAT then
+		v.value = 9999999
+		v.freeze = true
+end gg.addListItems(t)  
+gg.toast("Hide")
+gg.clearResults() gg.clearList() end end
+
+function spp2()
+gg.clearResults() gg.clearList() sentral()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + -0x12
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults()
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = gg.TYPE_FLOAT
+	v.address = v.address + -0x120
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+revert = gg.getListItems() local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_FLOAT then
+		v.value = -100000
+		v.freeze = true
+end gg.addListItems(t)  
+gg.toast("normal")
+gg.clearResults() gg.clearList() end end
+
+function spp3()
+gg.setRanges(gg.REGION_OTHER)
+gg.clearResults() gg.clearList()
+gg.searchNumber("257", gg.TYPE_DWORD) 
+--gg.refineAddress("D4C", -1, gg.TYPE_QWORD)
+HackersHouse = gg.getResults(250000)
+Offsets = {}
+Offsets['Offset_1'] = {}
+Offsets['Offset_2'] = {}
+Offsets['FinalResults'] = {}
+
+OffsetsIndex = 1
+for index, value in ipairs(HackersHouse) do
+Offsets['Offset_1'][OffsetsIndex] = {}
+Offsets['Offset_1'][OffsetsIndex].address = 
+HackersHouse[index].address + -0x58 --[[344]]
+Offsets['Offset_1'][OffsetsIndex].flags =
+gg.TYPE_FLOAT
+
+Offsets['Offset_2'][OffsetsIndex] = {}
+Offsets['Offset_2'][OffsetsIndex].address =
+HackersHouse[index].address + 0x58 --[[260]]
+Offsets['Offset_2'][OffsetsIndex].flags =
+gg.TYPE_FLOAT	
+
+OffsetsIndex = OffsetsIndex + 1 end
+Offsets['Offset_1'] = gg.getValues(Offsets['Offset_1'])
+Offsets['Offset_2'] = gg.getValues(Offsets['Offset_2'])
+OffsetsIndex = 1
+for index, value in ipairs(Offsets['Offset_1']) do 
+if (Offsets['Offset_1'][index].value == 1 ) and 
+(Offsets['Offset_2'][index].value == 1) then
+Offsets['FinalResults'][OffsetsIndex] = {}
+Offsets['FinalResults'][OffsetsIndex] = 
+Offsets['Offset_2'][index]
+OffsetsIndex = OffsetsIndex + 1 end end
+---------------------------------------------------------------------
+for index, value in ipairs(Offsets['FinalResults']) do
+Offsets['FinalResults'][index].address = 
+Offsets['FinalResults'][index].address + -0x14 --[[0x718]]
+Offsets['FinalResults'][index].flags = gg.TYPE_FLOAT 
+end
+gg.loadResults(Offsets['FinalResults'])
+results = gg.getResults(50)
+for i, v in ipairs(results) do
+v.value = 5
+v.freeze = true end
+gg.clearResults() 
+gg.addListItems(results) end 
+gg.clearResults() gg.clearList()
+
+function spp4()
+gg.setRanges(gg.REGION_OTHER)
+gg.clearResults() gg.clearList()
+gg.searchNumber("257", gg.TYPE_DWORD) 
+--gg.refineAddress("D4C", -1, gg.TYPE_QWORD)
+HackersHouse = gg.getResults(250000)
+Offsets = {}
+Offsets['Offset_1'] = {}
+Offsets['Offset_2'] = {}
+Offsets['FinalResults'] = {}
+
+OffsetsIndex = 1
+for index, value in ipairs(HackersHouse) do
+Offsets['Offset_1'][OffsetsIndex] = {}
+Offsets['Offset_1'][OffsetsIndex].address = 
+HackersHouse[index].address + -0x58 --[[344]]
+Offsets['Offset_1'][OffsetsIndex].flags =
+gg.TYPE_FLOAT
+
+Offsets['Offset_2'][OffsetsIndex] = {}
+Offsets['Offset_2'][OffsetsIndex].address =
+HackersHouse[index].address + 0x58 --[[260]]
+Offsets['Offset_2'][OffsetsIndex].flags =
+gg.TYPE_FLOAT	
+
+OffsetsIndex = OffsetsIndex + 1 end
+Offsets['Offset_1'] = gg.getValues(Offsets['Offset_1'])
+Offsets['Offset_2'] = gg.getValues(Offsets['Offset_2'])
+OffsetsIndex = 1
+for index, value in ipairs(Offsets['Offset_1']) do 
+if (Offsets['Offset_1'][index].value == 1 ) and 
+(Offsets['Offset_2'][index].value == 1) then
+Offsets['FinalResults'][OffsetsIndex] = {}
+Offsets['FinalResults'][OffsetsIndex] = 
+Offsets['Offset_2'][index]
+OffsetsIndex = OffsetsIndex + 1 end end
+---------------------------------------------------------------------
+for index, value in ipairs(Offsets['FinalResults']) do
+Offsets['FinalResults'][index].address = 
+Offsets['FinalResults'][index].address + -0x14 --[[0x718]]
+Offsets['FinalResults'][index].flags = gg.TYPE_FLOAT 
+end
+gg.loadResults(Offsets['FinalResults'])
+results = gg.getResults(50)
+for i, v in ipairs(results) do
+v.value = 1
+v.freeze = true end
+gg.clearResults() 
+gg.addListItems(results) end
+gg.clearResults() gg.clearList()
 
 function d()
 gg.clearResults()
@@ -235,34 +497,34 @@ gg.clearResults()
 gg.toast("Refresh")
 end
 
-
-function sentral()
+function exit()
+os.remove("/storage/emulated/0/Download/.cache.mtsx",gg.LOAD_APPEND)
+io.output(fileData):close()
+os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
+io.output(fileData):close()
+os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
+io.output(fileData):close()
 gg.clearResults() gg.clearList()
-gg.loadList("/storage/emulated/0/Download/cache.mtsx", 0)
+os.remove("/storage/emulated/0/Download/Telegram/🇲🇨NEW_UPDATE byBTR.lua",gg.LOAD_APPEND)
+io.output(fileData):close()
+gg.processResume()
+os.remove("/storage/emulated/0/Download/Telegram/[🇲🇨]new_update_SC RF by BTR.lua",gg.LOAD_APPEND)
+io.output(fileData):close()
+gg.clearResults() gg.clearList()
+os.exit()
 end
 
-function sentral2()
-gg.clearResults() gg.clearList()
-gg.loadList("/storage/emulated/0/Download/system.mtsx", 0)
-end
-
-if true then
-gg.setVisible(false)
-local org = gg.searchNumber
-local hook = function(...)
-gg.setVisible(false)
-local ret = org(...)
-if gg.isVisible() then
-gg.setVisible(false)
-while true do gg.clearResults() gg.sleep(1000) gg.processKill() end 
-hook() end return ret end gg.searchNumber = hook
+function info()
+gg.clearResults()
+gg.alert("🔸Jangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan Game Crash Parmanen (Harus Hapus Data Game agar bisa Normal kembali) ")
 end
 
 gg.setVisible(false)
 gg.processResume()
 os.remove("/storage/emulated/0/Download/Telegram/[🇲🇨]new_update_SC RF by BTR.lua",gg.LOAD_APPEND)
 io.output(fileData):close()
-
+os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
+io.output(fileData):close()
 os.remove("/storage/emulated/0/Download/Telegram/🇲🇨NEW_UPDATE byBTR.lua",gg.LOAD_APPEND)
 io.output(fileData):close()
 os.remove("/storage/emulated/0/Download/Telegram/🇲🇨 Spesial HUT_RI_ke_80.lua",gg.LOAD_APPEND)
@@ -276,7 +538,7 @@ io.output(folderData):close()
 os.remove("/storage/0403-0201/###/66.lua",gg.LOAD_APPEND)
 io.output(folderData):close()
 
-pass = 'bebas123'
+pass = 'Normal@'
 function start()
 --gg.alert("THE SCRIPT IS OPEN") 
 print ("NEXT")
@@ -288,7 +550,6 @@ if input[1] == pass then start() else
 print ("PASSWORD SALAH")
 gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
 
---AUTOSC =  start() 
 os.exit()
 end 
 if os.date("%Y%m%d") > "20250820" then
@@ -296,60 +557,25 @@ gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
 
-gg.setRanges(gg.REGION_CODE_APP)
+function sentral()
 gg.clearResults() gg.clearList()
+gg.loadList("/storage/emulated/0/Download/.cache.mtsx", 0)
+end
+
+gg.setRanges(gg.REGION_OTHER)
+gg.clearResults() gg.clearList()
+gg.searchNumber("7852458123887368624", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults() 
+
+gg.setRanges(gg.REGION_CODE_APP)
+gg.clearResults() 
 gg.searchNumber("16948", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(9999)
 gg.addListItems(t)
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + -0x12
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-gg.loadResults(gg.getListItems()) gg.clearList()
-gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(999)
-gg.addListItems(t)
-gg.clearResults()
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-v.flags = gg.TYPE_FLOAT
-	v.address = v.address + -0x120
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-gg.saveList("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
 
-gg.clearResults() gg.clearList()
-gg.setRanges(gg.REGION_OTHER)
-gg.setVisible(false)
-gg.clearResults() gg.clearList()
-gg.searchNumber("-4620123919485335869", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(9999)
-gg.addListItems(t) local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do v.flags = 4
-v.address = v.address + -0x10 end
-gg.addListItems(t) gg.loadResults(gg.getListItems())
-gg.refineNumber("0", gg.TYPE_DWORD) gg.clearList()
-local t = gg.getResults(99)
-gg.addListItems(t) gg.processResume()
-local copy = false local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-v.flags = 64 v.address = v.address + 0x18 end
-gg.addListItems(t) revert = gg.getListItems()
-local t = gg.getListItems() for i, v in ipairs(t) do
-if v.flags == 64 then v.value = "1.0"
-v.freeze = false end end gg.addListItems(t)
-gg.clearResults()
-gg.saveList("/storage/emulated/0/Download/cache.mtsx",gg.LOAD_APPEND)
+gg.saveList("/storage/emulated/0/Download/.cache.mtsx",gg.LOAD_APPEND)
 gg.clearResults() gg.clearList()
 XGCK = 1
 
@@ -363,5 +589,3 @@ while true do
   end
   XGCK = -1
 end
-
-
