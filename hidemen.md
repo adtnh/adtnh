@@ -24,8 +24,8 @@ function START()
   menu = gg.choice({
     "⭕  Booster Pro+",
     "⭕  Booster Pro+ for 32bit",
-    "⭕  Speed_Hack >",
-    "⭕  Hide Trees + Booster Color >",
+    "⭕  Home Speed_Hack ->",
+    "⭕  Hide Trees + Booster Color ->",
     "⭕  Refresh for Booster ",
     "❎  Exit Script",
     "⭕  INFO ",
@@ -91,7 +91,7 @@ gg.sleep(1000)
  end end
  
  function bit32()
-gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER) 
+gg.setRanges(gg.REGION_OTHER) 
 gg.clearResults() gg.clearList()
 gg.searchNumber("16656", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(9999) gg.addListItems(t)
@@ -142,19 +142,20 @@ gg.sleep(1000)
  end end
 
 function b()
-XX = gg.choice({
+XX = gg.multiChoice({
     "⚡ Speed 5%",
     "⚡ Speed 10%",
     "⚡ Speed 15%",
     "⚡ Speed Max I",
     "⚡ Speed Hack OFF",   
   }, nil, "BTR Menu Hack Speed")
-  if XX == 1 then sp1() end
-  if XX == 2 then sp2() end
-  if XX == 3 then sp3() end
-  if XX == 4 then sp4() end
-  if XX == 5 then sp5() end end
-  
+  if XX == nil then else
+  if XX[1] == true then sp1() end
+  if XX[2] == true then sp2() end
+  if XX[3] == true then sp3() end
+  if XX[4] == true then sp4() end
+  if XX[5] == true then sp5() end 
+  menuk = 1 end end 
 function sp1()
 gg.clearResults() gg.clearList() sentral()
 gg.loadResults(gg.getListItems()) gg.clearList()
@@ -285,16 +286,20 @@ gg.toast("Speed OFF")
 gg.clearResults() gg.clearList() end end
 
 function c()
- XX3 = gg.choice({
+ XX3 = gg.multiChoice({
     "🪵  Hide Pohon",
     "🌲  Tampilkan Pohon",
     "🟢  Color Ijo On 😅😅",
     "🟡  Color Ijo Off 🤣🤣",
   }, nil )
-  if XX3 == 1 then spp1() end
-  if XX3 == 2 then spp2() end
-  if XX3 == 3 then spp3() end
-  if XX3 == 4 then spp4() end end
+  
+  
+  if XX3 == nil then else
+  if XX3[1] == true then spp1() end
+  if XX3[2] == true then spp2() end
+  if XX3[3] == true then spp3() end
+  if XX3[4] == true then spp4() end
+  menuk = 1 end end 
   
 function spp1()
 gg.clearResults() gg.clearList() sentral()
@@ -589,3 +594,5 @@ while true do
   end
   XGCK = -1
 end
+
+
