@@ -457,7 +457,7 @@ if true then
     end
     gg.searchNumber = hook
 end
-
+--[[
 gg.setVisible(false)
 gg.setRanges(gg.REGION_OTHER)
 gg.clearResults() gg.clearList()
@@ -617,7 +617,7 @@ gg.clearResults()
 gg.addListItems(results) 
 gg.saveList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/.Shared/ZLkqCLrtiBiE7gz87IkzCAmiP55lNdKZCMTXgcw4tmp.mtsx",gg.LOAD_APPEND)
 gg.clearResults() gg.clearList()
-
+]]
 
 XGCK = 1
 
