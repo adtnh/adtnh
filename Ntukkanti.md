@@ -137,22 +137,71 @@ gg.toast("Speed 3 Active")
 gg.clearResults() gg.clearList() end end
 
 function sp4()
-gg.clearResults() gg.clearList() sentral2()
+gg.clearResults() gg.clearList() sentral3()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + -0x12
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults()
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 4
+	v.address = v.address + -0x170
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.flags == 64 then
-		v.value = 1.002
+	if v.flags == 4 then
+		v.value = 1031981770
 		v.freeze = true
 end gg.addListItems(t)  
-gg.toast("Speed Max I Active")
+gg.toast("Speed Max I On")
 gg.clearResults() gg.clearList() end end
 
-function sp5()
-gg.clearResults() gg.clearList() sentral2()
-
+function sp5() 
+gg.clearResults() gg.clearList() sentral3()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + -0x12
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+gg.loadResults(gg.getListItems()) gg.clearList()
+gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(999)
+gg.addListItems(t)
+gg.clearResults()
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+v.flags = 4
+	v.address = v.address + -0x170
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.flags == 64 then
+	if v.flags == 4 then
+		v.value = 1010991770
+		v.freeze = true
+end gg.addListItems(t)  
+gg.clearResults() gg.clearList() end 
+gg.clearResults() gg.clearList() sentral2()
+revert = gg.getListItems() local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == 4 then
 		v.value = 1
 		v.freeze = true
 end gg.addListItems(t)  
