@@ -194,7 +194,7 @@ gg.addListItems(t)
 revert = gg.getListItems() local t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.flags == 4 then
-		v.value = 1010991770
+		v.value = 1008981771
 		v.freeze = true
 end gg.addListItems(t)  
 gg.clearResults() gg.clearList() end 
