@@ -457,8 +457,9 @@ if true then
     end
     gg.searchNumber = hook
 end
---[[
+
 gg.setVisible(false)
+--[[
 gg.setRanges(gg.REGION_OTHER)
 gg.clearResults() gg.clearList()
 gg.searchNumber(5445172544108172615, gg.TYPE_QWORD)
