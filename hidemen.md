@@ -366,107 +366,26 @@ gg.toast("normal")
 gg.clearResults() gg.clearList() end end
 
 function spp3()
-gg.setRanges(gg.REGION_OTHER)
-gg.clearResults() gg.clearList()
-gg.searchNumber("257", gg.TYPE_DWORD) 
---gg.refineAddress("D4C", -1, gg.TYPE_QWORD)
-HackersHouse = gg.getResults(250000)
-Offsets = {}
-Offsets['Offset_1'] = {}
-Offsets['Offset_2'] = {}
-Offsets['FinalResults'] = {}
-
-OffsetsIndex = 1
-for index, value in ipairs(HackersHouse) do
-Offsets['Offset_1'][OffsetsIndex] = {}
-Offsets['Offset_1'][OffsetsIndex].address = 
-HackersHouse[index].address + -0x58 --[[344]]
-Offsets['Offset_1'][OffsetsIndex].flags =
-gg.TYPE_FLOAT
-
-Offsets['Offset_2'][OffsetsIndex] = {}
-Offsets['Offset_2'][OffsetsIndex].address =
-HackersHouse[index].address + 0x58 --[[260]]
-Offsets['Offset_2'][OffsetsIndex].flags =
-gg.TYPE_FLOAT	
-
-OffsetsIndex = OffsetsIndex + 1 end
-Offsets['Offset_1'] = gg.getValues(Offsets['Offset_1'])
-Offsets['Offset_2'] = gg.getValues(Offsets['Offset_2'])
-OffsetsIndex = 1
-for index, value in ipairs(Offsets['Offset_1']) do 
-if (Offsets['Offset_1'][index].value == 1 ) and 
-(Offsets['Offset_2'][index].value == 1) then
-Offsets['FinalResults'][OffsetsIndex] = {}
-Offsets['FinalResults'][OffsetsIndex] = 
-Offsets['Offset_2'][index]
-OffsetsIndex = OffsetsIndex + 1 end end
----------------------------------------------------------------------
-for index, value in ipairs(Offsets['FinalResults']) do
-Offsets['FinalResults'][index].address = 
-Offsets['FinalResults'][index].address + -0x14 --[[0x718]]
-Offsets['FinalResults'][index].flags = gg.TYPE_FLOAT 
-end
-gg.loadResults(Offsets['FinalResults'])
-results = gg.getResults(50)
-for i, v in ipairs(results) do
-v.value = 5
-v.freeze = true end
-gg.clearResults() 
-gg.addListItems(results) end 
-gg.clearResults() gg.clearList()
+gg.clearResults() gg.clearList() sentral2()
+revert = gg.getListItems() local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_FLOAT then
+		v.value = 5
+		v.freeze = true
+end gg.addListItems(t)  
+gg.toast("Color On")
+gg.clearResults() gg.clearList() end end
 
 function spp4()
-gg.setRanges(gg.REGION_OTHER)
-gg.clearResults() gg.clearList()
-gg.searchNumber("257", gg.TYPE_DWORD) 
---gg.refineAddress("D4C", -1, gg.TYPE_QWORD)
-HackersHouse = gg.getResults(250000)
-Offsets = {}
-Offsets['Offset_1'] = {}
-Offsets['Offset_2'] = {}
-Offsets['FinalResults'] = {}
-
-OffsetsIndex = 1
-for index, value in ipairs(HackersHouse) do
-Offsets['Offset_1'][OffsetsIndex] = {}
-Offsets['Offset_1'][OffsetsIndex].address = 
-HackersHouse[index].address + -0x58 --[[344]]
-Offsets['Offset_1'][OffsetsIndex].flags =
-gg.TYPE_FLOAT
-
-Offsets['Offset_2'][OffsetsIndex] = {}
-Offsets['Offset_2'][OffsetsIndex].address =
-HackersHouse[index].address + 0x58 --[[260]]
-Offsets['Offset_2'][OffsetsIndex].flags =
-gg.TYPE_FLOAT	
-
-OffsetsIndex = OffsetsIndex + 1 end
-Offsets['Offset_1'] = gg.getValues(Offsets['Offset_1'])
-Offsets['Offset_2'] = gg.getValues(Offsets['Offset_2'])
-OffsetsIndex = 1
-for index, value in ipairs(Offsets['Offset_1']) do 
-if (Offsets['Offset_1'][index].value == 1 ) and 
-(Offsets['Offset_2'][index].value == 1) then
-Offsets['FinalResults'][OffsetsIndex] = {}
-Offsets['FinalResults'][OffsetsIndex] = 
-Offsets['Offset_2'][index]
-OffsetsIndex = OffsetsIndex + 1 end end
----------------------------------------------------------------------
-for index, value in ipairs(Offsets['FinalResults']) do
-Offsets['FinalResults'][index].address = 
-Offsets['FinalResults'][index].address + -0x14 --[[0x718]]
-Offsets['FinalResults'][index].flags = gg.TYPE_FLOAT 
-end
-gg.loadResults(Offsets['FinalResults'])
-results = gg.getResults(50)
-for i, v in ipairs(results) do
-v.value = 1
-v.freeze = true end
-gg.clearResults() 
-gg.addListItems(results) end
-gg.clearResults() gg.clearList()
-
+gg.clearResults() gg.clearList() sentral2()
+revert = gg.getListItems() local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_FLOAT then
+		v.value = 1
+		v.freeze = true
+end gg.addListItems(t)  
+gg.toast("Color Off")
+gg.clearResults() gg.clearList() end end
 function d()
 gg.clearResults()
 gg.clearList()
@@ -503,9 +422,9 @@ gg.toast("Refresh")
 end
 
 function exit()
-os.remove("/storage/emulated/0/Download/.cache.mtsx",gg.LOAD_APPEND)
+os.remove("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0089.jpg",gg.LOAD_APPEND)
 io.output(fileData):close()
-os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
+os.remove("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0088.jpg",gg.LOAD_APPEND)
 io.output(fileData):close()
 os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
 io.output(fileData):close()
@@ -526,26 +445,8 @@ end
 
 gg.setVisible(false)
 gg.processResume()
-os.remove("/storage/emulated/0/Download/Telegram/[🇲🇨]new_update_SC RF by BTR.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/emulated/0/Download/system.mtsx",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/emulated/0/Download/Telegram/🇲🇨NEW_UPDATE byBTR.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/emulated/0/Download/Telegram/🇲🇨 Spesial HUT_RI_ke_80.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/0403-0201/###/g/.lua",gg.LOAD_APPEND)
-io.output(fileData):close()
-os.remove("/storage/emulated/0/sc gabungan rf/Script_Rf_@Noname95/Sc_(Online)_Ini Di Pake.lua",gg.LOAD_APPEND)
-io.output(folderData):close()
-os.remove("/storage/emulated/0/sc gabungan rf/SC(RallyFury)2025",gg.LOAD_APPEND)
-io.output(folderData):close()
-os.remove("/storage/0403-0201/###/66.lua",gg.LOAD_APPEND)
-io.output(folderData):close()
-
-pass = 'Normal@sajala+$+$+&#-#+#+'
+pass = 'Normal@'
 function start()
---gg.alert("THE SCRIPT IS OPEN") 
 print ("NEXT")
 end 
 
@@ -554,17 +455,22 @@ if not input then os.exit() end
 if input[1] == pass then start() else
 print ("PASSWORD SALAH")
 gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
-
 os.exit()
 end 
-if os.date("%Y%m%d") > "20250819" then
+
+if os.date("%Y%m%d") > "20250821" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
 
 function sentral()
 gg.clearResults() gg.clearList()
-gg.loadList("/storage/emulated/0/Download/.cache.mtsx", 0)
+gg.loadList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0089.jpg", 0)
+end
+
+function sentral2()
+gg.clearResults() gg.clearList()
+gg.loadList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0088.jpg", 0)
 end
 
 gg.setRanges(gg.REGION_OTHER)
@@ -580,7 +486,54 @@ gg.searchNumber("16948", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(9999)
 gg.addListItems(t)
 
-gg.saveList("/storage/emulated/0/Download/.cache.mtsx",gg.LOAD_APPEND)
+gg.saveList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0089.jpg",gg.LOAD_APPEND)
+gg.clearResults() gg.clearList()
+gg.setRanges(gg.REGION_OTHER)
+gg.clearResults() gg.clearList()
+gg.searchNumber("257", gg.TYPE_DWORD) 
+HackersHouse = gg.getResults(250000)
+Offsets = {}
+Offsets['Offset_1'] = {}
+Offsets['Offset_2'] = {}
+Offsets['FinalResults'] = {}
+
+OffsetsIndex = 1
+for index, value in ipairs(HackersHouse) do
+Offsets['Offset_1'][OffsetsIndex] = {}
+Offsets['Offset_1'][OffsetsIndex].address = 
+HackersHouse[index].address + -0x58
+Offsets['Offset_1'][OffsetsIndex].flags =
+gg.TYPE_FLOAT
+
+Offsets['Offset_2'][OffsetsIndex] = {}
+Offsets['Offset_2'][OffsetsIndex].address =
+HackersHouse[index].address + 0x58 
+Offsets['Offset_2'][OffsetsIndex].flags =
+gg.TYPE_FLOAT	
+
+OffsetsIndex = OffsetsIndex + 1 end
+Offsets['Offset_1'] = gg.getValues(Offsets['Offset_1'])
+Offsets['Offset_2'] = gg.getValues(Offsets['Offset_2'])
+OffsetsIndex = 1
+for index, value in ipairs(Offsets['Offset_1']) do 
+if (Offsets['Offset_1'][index].value == 1 ) and 
+(Offsets['Offset_2'][index].value == 1) then
+Offsets['FinalResults'][OffsetsIndex] = {}
+Offsets['FinalResults'][OffsetsIndex] = 
+Offsets['Offset_2'][index]
+OffsetsIndex = OffsetsIndex + 1 end end
+for index, value in ipairs(Offsets['FinalResults']) do
+Offsets['FinalResults'][index].address = 
+Offsets['FinalResults'][index].address + -0x14 
+Offsets['FinalResults'][index].flags = gg.TYPE_FLOAT 
+end
+gg.loadResults(Offsets['FinalResults'])
+results = gg.getResults(50)
+for i, v in ipairs(results) do
+v.freeze = false end
+gg.clearResults() 
+gg.addListItems(results) 
+gg.saveList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/.IMG-20211130-WA0088.jpg",gg.LOAD_APPEND)
 gg.clearResults() gg.clearList()
 XGCK = 1
 
@@ -594,5 +547,7 @@ while true do
   end
   XGCK = -1
 end
+
+
 
 
