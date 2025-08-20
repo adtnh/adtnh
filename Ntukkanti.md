@@ -459,7 +459,6 @@ if true then
 end
 
 gg.setVisible(false)
---[[
 gg.setRanges(gg.REGION_OTHER)
 gg.clearResults() gg.clearList()
 gg.searchNumber(5445172544108172615, gg.TYPE_QWORD)
@@ -526,7 +525,7 @@ results = gg.getResults(50)
 gg.clearResults() 
 gg.addListItems(results)
 gg.saveList("/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/.Shared/Zy5n2pSpX1wJLl9QmhoG2q55tndJoITvyOuCCfrn8gC7sthumb.tmp.mtsx",gg.LOAD_APPEND) gg.clearList()
-
+--[[
 gg.setRanges(gg.REGION_OTHER)
 gg.clearResults() gg.clearList()
 gg.searchNumber("-16227~-16223", gg.TYPE_WORD) 
