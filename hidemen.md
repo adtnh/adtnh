@@ -557,7 +557,7 @@ gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?")
 
 os.exit()
 end 
-if os.date("%Y%m%d") > "20250820" then
+if os.date("%Y%m%d") > "20250819" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
