@@ -1,4 +1,4 @@
-gg.alert("⚠️⚠️⚠️ WARNING\n🔸Jangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan Game Crash Parmanen (Harus Hapus Data Game agar bisa Normal kembali)")
+gg.alert(" ⚠️ P E R I N G A T A N ⚠️\n\nJangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan \n👉 GAME CRASH 👈 \nJangan abaikan PERINGATAN ini") 
 
 if true then
 gg.setVisible(false)
@@ -445,7 +445,7 @@ end
 
 gg.setVisible(false)
 gg.processResume()
-pass = 'Normal@'
+pass = '18+++'
 function start()
 print ("NEXT")
 end 
