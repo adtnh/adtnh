@@ -1,4 +1,4 @@
-API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/GSpot/Ntukkanti3').content
+API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/GSpot/Ntukkanti').content
 if not API then
 gg.alert('No internet')
 noselect()
