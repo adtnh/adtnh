@@ -1,4 +1,4 @@
-API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/HidemenEdit.md').content
+API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/hidemenEdit.md').content
 if not API then
 gg.alert('No internet')
 noselect()
