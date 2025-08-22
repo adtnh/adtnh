@@ -1,3 +1,5 @@
+gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
+
 gg.setVisible(false)
 gg.processResume()
 pass = '18+++'
