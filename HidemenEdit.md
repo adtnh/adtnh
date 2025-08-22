@@ -445,7 +445,7 @@ end
 
 gg.setVisible(false)
 gg.processResume()
-pass = '18+++'
+pass = '18xxx'
 function start()
 print ("NEXT")
 end 
