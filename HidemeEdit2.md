@@ -1,5 +1,5 @@
 
-API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/Expired.md').content
+API = gg.makeRequest('https://raw.githubusercontent.com/adtnh/adtnh/refs/heads/main/Pasword.md').content
 if not API then
 gg.alert('No internet')
 noselect()
