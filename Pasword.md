@@ -1,4 +1,4 @@
-gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
+gg.alert("Terdeteksi ada yang membagikan Kata Sandi tanpa izin Admin \nDetect someone sharing passwords without admin permission") 
 
 gg.setVisible(false)
 gg.processResume()
@@ -10,7 +10,7 @@ end
 input = gg.prompt({'ENTER PW'}, nil,{'Text'})
 if not input then os.exit() end
 if input[1] == pass then start() else
-print ("PASSWORD SALAH")
-gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
+print ("Password Error e22")
+gg.alert("Password Error e22") 
 os.exit()
 end
