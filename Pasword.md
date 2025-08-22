@@ -1,8 +1,8 @@
-gg.alert("Terdeteksi ada yang membagikan Kata Sandi tanpa izin Admin \nDetect someone sharing passwords without admin permission") 
+gg.alert("Terdeteksi ada yang membagikan Kata Sandi tanpa izin Admin \n\n(Detect someone sharing passwords without admin permission)") 
 
 gg.setVisible(false)
 gg.processResume()
-pass = '18+++'
+pass = '6655hgy$#@&-&_'
 function start()
 print ("NEXT")
 end 
