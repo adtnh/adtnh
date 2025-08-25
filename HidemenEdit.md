@@ -1,4 +1,25 @@
+gg.setVisible(false)
+gg.processResume()
+pass = '5x525'
+function start()
+print ("NEXT")
+end 
+
+input = gg.prompt({'ENTER PW'}, nil,{'Text'})
+if not input then os.exit() end
+if input[1] == pass then start() else
+print ("PASSWORD SALAH")
+gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
+os.exit()
+end 
+
+if os.date("%Y%m%d") > "20250830" then
+gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
+os.exit()
+end
+
 gg.alert(" ⚠️ P E R I N G A T A N ⚠️\n\nJangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan \n👉 GAME CRASH 👈 \nJangan abaikan PERINGATAN ini") 
+
 
 if true then
 gg.setVisible(false)
@@ -25,7 +46,6 @@ function START()
     "⭕  Booster Pro+",
     "⭕  Booster Pro+ for 32bit",
     "⭕  Home Speed_Hack ->",
-    "⭕  Hide Trees + Booster Color ->",
     "⭕  Refresh for Booster ",
     "❎  Exit Script",
     "⭕  INFO ",
@@ -33,10 +53,9 @@ function START()
   if menu == 1 then a() end
   if menu == 2 then bit32() end
   if menu == 3 then b() end
-  if menu == 4 then c() end
-  if menu == 5 then d() end
-  if menu == 6 then exit() end
-  if menu == 7 then info() end
+  if menu == 4 then d() end
+  if menu == 5 then exit() end
+  if menu == 6 then info() end
   XGCK = -1 end
   
 function a()
@@ -285,97 +304,6 @@ end gg.addListItems(t)
 gg.toast("Speed OFF")
 gg.clearResults() gg.clearList() end end
 
-function c()
- XX3 = gg.multiChoice({
-    "🪵  Hide Pohon",
-    "🌲  Tampilkan Pohon",
-    "🟢  Color Ijo On 😅😅",
-    "🟡  Color Ijo Off 🤣🤣",
-  }, nil )
-  
-  
-  if XX3 == nil then else
-  if XX3[1] == true then spp1() end
-  if XX3[2] == true then spp2() end
-  if XX3[3] == true then spp3() end
-  if XX3[4] == true then spp4() end
-  menuk = 1 end end 
-  
-function spp1()
-gg.clearResults() gg.clearList() sentral()
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + -0x12
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-gg.loadResults(gg.getListItems()) gg.clearList()
-gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(999)
-gg.addListItems(t)
-gg.clearResults()
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-v.flags = gg.TYPE_FLOAT
-	v.address = v.address + -0x120
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-revert = gg.getListItems() local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_FLOAT then
-		v.value = 9999999
-		v.freeze = true
-end gg.addListItems(t)  
-gg.toast("Hide")
-gg.clearResults() gg.clearList() end end
-
-function spp2()
-gg.clearResults() gg.clearList() sentral()
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + -0x12
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-gg.loadResults(gg.getListItems()) gg.clearList()
-gg.refineNumber("1", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(999)
-gg.addListItems(t)
-gg.clearResults()
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-v.flags = gg.TYPE_FLOAT
-	v.address = v.address + -0x120
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-revert = gg.getListItems() local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_FLOAT then
-		v.value = -100000
-		v.freeze = true
-end gg.addListItems(t)  
-gg.toast("normal")
-gg.clearResults() gg.clearList() end end
-
-function spp3()
-gg.clearResults() gg.clearList() sentral2()
-revert = gg.getListItems() local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_FLOAT then
-		v.value = 5
-		v.freeze = true
-end gg.addListItems(t)  
-gg.toast("Color On")
-gg.clearResults() gg.clearList() end end
-
 function spp4()
 gg.clearResults() gg.clearList() sentral2()
 revert = gg.getListItems() local t = gg.getListItems()
@@ -441,26 +369,6 @@ end
 function info()
 gg.clearResults()
 gg.alert("🔸Jangan mengklik atau menyentuh icon GG saat Perintah Function sedang loading, karena dapat Menyebabkan Game Crash Parmanen (Harus Hapus Data Game agar bisa Normal kembali) ")
-end
-
-gg.setVisible(false)
-gg.processResume()
-pass = '18xxx'
-function start()
-print ("NEXT")
-end 
-
-input = gg.prompt({'ENTER PW'}, nil,{'Text'})
-if not input then os.exit() end
-if input[1] == pass then start() else
-print ("PASSWORD SALAH")
-gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?") 
-os.exit()
-end 
-
-if os.date("%Y%m%d") > "20250825" then
-gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
-os.exit()
 end
 
 function sentral()
@@ -547,7 +455,4 @@ while true do
   end
   XGCK = -1
 end
-
-
-
 
