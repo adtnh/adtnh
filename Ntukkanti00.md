@@ -474,7 +474,7 @@ gg.alert(" ⚠️ P E R I N G A T A N ⚠️\n\nJangan mengklik atau menyentuh i
 end
 gg.setVisible(false)
 gg.processResume()
-if os.date("%Y%m%d") > "20250825" then
+if os.date("%Y%m%d") > "20250826" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
