@@ -465,6 +465,7 @@ end
 
 function exit()
 gg.clearResults() gg.clearList()
+gg.processKill() 
 os.exit()
 end
 
