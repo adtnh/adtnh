@@ -327,6 +327,7 @@ gg.toast("") end end
 
 
 function hide()
+gg.setRanges(gg.REGION_C_ALLOC) 
  gg.clearResults() gg.clearList()
 gg.searchNumber("3977304300135658256", 32) 
 results = gg.getResults(90000)
