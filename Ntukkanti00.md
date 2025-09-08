@@ -329,49 +329,7 @@ gg.toast("") end end
 function hide()
 gg.setRanges(gg.REGION_C_ALLOC) 
  gg.clearResults() gg.clearList()
-gg.searchNumber("3977304300135658256", 32) 
-results = gg.getResults(90000)
-if #results < 1 then gg.toast("") else
-for i = 1,#results do
-gg.addListItems({ -- Token Uang/Credit
-[1] = {address = results[i].address + -640,
-flags = 0x04, value = 0, freeze = true},
-[2] = {address = results[i].address + -644,
-flags = 0x04, value = 0, freeze = true},
-[3] = {address = results[i].address + -648,
-flags = 0x04, value = 0, freeze = true},
-[4] = {address = results[i].address + -652,
-flags = 0x04, value =  0, freeze = true},
-[5] = {address = results[i].address + -656,
-flags = 0x04, value = -45088639, freeze = true}}) 
-end end 
-results = gg.getResults(90000)
-if #results < 1 then gg.toast("") else
-for i = 1,#results do
-gg.addListItems({ -- Token R
-[1] = {address = results[i].address + -816,
-flags = 0x04, value = 0, freeze = true},
-[2] = {address = results[i].address + -820,
-flags = 0x04, value = 0, freeze = true},
-[3] = {address = results[i].address + -824,
-flags = 0x04, value = 0, freeze = true},
-[4] = {address = results[i].address + -828,
-flags = 0x04, value = 0, freeze = true},
-[5] = {address = results[i].address + -832,
-flags = 0x04, value = 0, freeze = true},
-[6] = {address = results[i].address + -836,
-flags = 0x04, value = 0, freeze = true},
-[7] = {address = results[i].address + -840,
-flags = 0x04, value = 0, freeze = true},
-[8] = {address = results[i].address + -844,
-flags = 0x04, value = 0, freeze = true},
-[9] = {address = results[i].address + -848,
-flags = 0x04, value = 0, freeze = true},
-[10] = {address = results[i].address + -852,
-flags = 0x04, value = -1055766001, freeze = true}})
-gg.clearList() gg.clearResults()
-gg.toast("💲💲💲💲💲💲")
-end  end end
+end
 
 function fresh()
 gg.clearResults() gg.clearList()
