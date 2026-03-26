@@ -1,6 +1,6 @@
 gg.setVisible(false)
 gg.processResume()
-pass = '5x525'
+pass = '999'
 function start()
 print ("NEXT")
 end 
@@ -13,7 +13,7 @@ gg.alert("Sepertinya Pasword yg dimasukkan Salah !!!?")
 os.exit()
 end 
 
-if os.date("%Y%m%d") > "20250830" then
+if os.date("%Y%m%d") > "2025l60330" then
 gameguardianph=gg.alert("❌Script Expired❌\nDownload Latest Version")
 os.exit()
 end
